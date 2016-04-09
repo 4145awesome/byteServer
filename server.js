@@ -15,7 +15,7 @@ var fs = require('fs');
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
-var port = process.env.PORT || 8080;        // set our port
+var port = process.env.PORT || 80;        // set our port
 
 Buffer.prototype.toByteArray = function () {
     return Array.prototype.slice.call(this, 0)
