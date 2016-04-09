@@ -72,5 +72,6 @@ app.use('/api', router);
 
 // START THE SERVER
 // =============================================================================
-app.listen(port, ip);
-console.log('Server ready on port ' + port);
+app.listen(port, ip, function() {
+    console.log('✔ Server ready on '+ ip + ":" + port);
+});
