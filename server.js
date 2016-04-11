@@ -58,7 +58,7 @@ router.post('/process', function(req, res){
         var size = req.body["size"];
         var buffer = new Buffer(size);
         fs.read(fd, buffer, 0, size, 0, function(err, num, buffer){
-            res.json({"id": req.body["id"], "received": startTime, "payload": buffer.toByteArray(), "delay": Date.now() - startTime});
+            res.json({"id": req.body["id"], "received": new Date(startTime), "payload": buffer.toByteArray(), "delay": Date.now() - startTime});
         })
     });
 
